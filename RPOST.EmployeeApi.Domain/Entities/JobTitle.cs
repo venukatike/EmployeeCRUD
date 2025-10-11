@@ -8,7 +8,7 @@ namespace RPOST.EmployeeApi.Domain.Entities
 {
     public class JobTitle
     {
-        public string JobTitles { get; set; } = null!;
+        public string JobTitlesz { get; set; } = null!;
 
         public string? JobDescription { get; set; }
 

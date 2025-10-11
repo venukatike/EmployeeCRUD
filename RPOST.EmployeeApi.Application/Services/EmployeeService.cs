@@ -28,7 +28,7 @@ namespace RPOST.EmployeeApi.Application.Services
                 EmployeeId= x.EmployeeId,
                 FirstName= x.FirstName,
                 LastName = x.LastName,
-                JobTitle = x.JobTitleNavigation?.JobTitles
+                JobTitle = x.JobTitleNavigation?.JobTitlesz
                
             }).ToList();
             return employeeDto;

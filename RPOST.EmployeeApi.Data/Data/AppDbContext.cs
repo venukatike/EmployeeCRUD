@@ -17,24 +17,26 @@ namespace RPOST.EmployeeApi.Data.Data
         }
         public DbSet<Employee> Employee { get; set; }
         public DbSet<JobTitle> JobTitle { get; set; }
+        public DbSet<UserProfile> UserProfiles { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Employee>(entity =>
-            {
-                entity.ToTable("Employee");
-                entity.HasKey(e => e.EmployeeId);
+            //modelBuilder.Entity<Employee>(entity =>
+            //{
+            //    entity.ToTable("Employee");
+            //    entity.HasKey(e => e.EmployeeId);
 
-                entity.HasOne(d => d.JobTitleNavigation).WithMany(p => p.Employees)
-                    .HasForeignKey(d => d.JobTitle);
-            });
+            //    entity.HasOne(d => d.JobTitleNavigation).WithMany(p => p.Employees)
+            //        .HasForeignKey(d => d.JobTitle);
+            //});
+            modelBuilder.ApplyConfigurationsFromAssembly(typeof(AppDbContext).Assembly);
 
-            modelBuilder.Entity<JobTitle>(entity =>
-            {
-                entity.ToTable("JobTitle");
-                entity.HasKey(e => e.JobTitles);
-                entity.Property(e => e.JobTitles).HasColumnName("JobTitle");
-            });
+            //modelBuilder.Entity<JobTitle>(entity =>
+            //{
+            //    entity.ToTable("JobTitle");
+            //    entity.HasKey(e => e.JobTitles);
+            //    entity.Property(e => e.JobTitles).HasColumnName("JobTitle");
+            //});
         }
     }
 }

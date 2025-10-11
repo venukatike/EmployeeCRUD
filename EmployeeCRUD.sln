@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35919.96 d17.13
+VisualStudioVersion = 17.13.35919.96
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeCRUD", "EmployeeCRUD\EmployeeCRUD.csproj", "{B9207B2C-F20F-41B3-902A-F5D19BA82E84}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RPOST.EmployeeApi.Data", "RPOST.EmployeeApi.Data\RPOST.EmployeeApi.Data.csproj", "{F4E49C6F-2908-433F-B8F9-A1E8BB5A1145}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RPOST.EmployeeApi.Domain", "RPOST.EmployeeApi.Domain\RPOST.EmployeeApi.Domain.csproj", "{0DE2CD9E-EFF7-42BD-B50D-9C90B595485B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RPOST.EmployeeApi.Tests", "RPOST.EmployeeApi.Tests\RPOST.EmployeeApi.Tests.csproj", "{CA94212C-48E1-4AB8-BCD6-5F6E8CA8C165}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{0DE2CD9E-EFF7-42BD-B50D-9C90B595485B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0DE2CD9E-EFF7-42BD-B50D-9C90B595485B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0DE2CD9E-EFF7-42BD-B50D-9C90B595485B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA94212C-48E1-4AB8-BCD6-5F6E8CA8C165}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA94212C-48E1-4AB8-BCD6-5F6E8CA8C165}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA94212C-48E1-4AB8-BCD6-5F6E8CA8C165}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA94212C-48E1-4AB8-BCD6-5F6E8CA8C165}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -13,7 +13,6 @@ namespace RPOST.EmployeeApi.Data.Interfaces
         Task<Employee> AddEmployee(Employee employee);
         Task UpdateEmployee();
         Task<Employee> EmployeeById(string Id);
-
         Task<Employee> DeleteEmployee(Employee employee);
     }
 }
