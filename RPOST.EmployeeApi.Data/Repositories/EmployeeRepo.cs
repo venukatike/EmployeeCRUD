@@ -21,7 +21,8 @@ namespace RPOST.EmployeeApi.Data.Repositories
 
         public async Task<List<Employee>> GetAll()
         {
-            var d =    await _context.Employee.Include(x=>x.JobTitleNavigation).ToListAsync();
+            var d = await _context.Employee.Include(x=>x.JobTitleNavigation).ToListAsync();
+
             return d;
         }
 

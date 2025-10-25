@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using EmployeeCRUD.Filters;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using RPOST.EmployeeApi.Application.Interfaces;
@@ -9,7 +10,9 @@ namespace EmployeeCRUD.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
+    [ServiceFilter(typeof(LogExecutionTimeFilter))]
+    [ServiceFilter(typeof(ApiExceptionFilter))]
+   // [Authorize]
     public class EmployeeController : ControllerBase
     {
         private readonly IEmployeeService employeeService;

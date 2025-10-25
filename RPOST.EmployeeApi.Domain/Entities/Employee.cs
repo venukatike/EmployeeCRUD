@@ -2,13 +2,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
+using RPOST.EmployeeApi.Data.Mapping;
 
 namespace RPOST.EmployeeApi.Domain.Entities
 {
     public class Employee
     {
-        public string EmployeeId { get; set; } = null!;
+        public string EmployeeId { get; set; } //= null!;
 
         public string? FirstName { get; set; }
 
@@ -26,8 +28,8 @@ namespace RPOST.EmployeeApi.Domain.Entities
 
         public string? ModifiedUser { get; set; }
 
-        public virtual JobTitle? JobTitleNavigation { get; set; }
-
+        public JobTitle? JobTitleNavigation { get; set; }
+        public ICollection<JuncEmployeeProjects> juncEmployeeProjects { get; set; } = new List<JuncEmployeeProjects>();
 
     }
 }

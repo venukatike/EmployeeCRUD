@@ -1,4 +1,5 @@
 using System.Text;
+using EmployeeCRUD.Filters;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -50,7 +51,17 @@ builder.Services.AddAuthorization();
 
 // Add services to the container.
 
-builder.Services.AddControllers();
+builder.Services.AddControllers(
+    options => { 
+        options.Filters.Add<LogExecutionTimeFilter>(); 
+        options.Filters.Add<ApiExceptionFilter>();
+
+    }
+
+    );
+builder.Services.AddScoped<LogExecutionTimeFilter>();
+builder.Services.AddScoped<ApiExceptionFilter>();
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

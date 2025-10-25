@@ -16,8 +16,8 @@ namespace RPOST.EmployeeApi.Data.Mapping
         {
             builder.ToTable("Employee");
             builder.HasKey(e => e.EmployeeId);
-            builder.HasOne(d => d.JobTitleNavigation).WithMany(p => p.Employees)
-                    .HasForeignKey(d => d.JobTitle);
+            builder.HasOne(d => d.JobTitleNavigation).WithMany(p => p.Employees).HasForeignKey(d => d.JobTitle);
+            builder.HasMany(e => e.juncEmployeeProjects).WithOne(w => w.employees);
             
         }
     }
