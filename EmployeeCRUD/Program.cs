@@ -10,6 +10,7 @@ using RPOST.EmployeeApi.Application.Services;
 using RPOST.EmployeeApi.Data.Data;
 using RPOST.EmployeeApi.Data.Interfaces;
 using RPOST.EmployeeApi.Data.Repositories;
+using RPOST.EmployeeApi.Domain.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -70,9 +71,11 @@ builder.Services.AddScoped<IEmployeeRepo, EmployeeRepo>();
 builder.Services.AddScoped<IEmployeeService, EmployeeService>();
 // Add token service (implementation below)
 builder.Services.AddScoped<ITokenService, TokenService>();
+builder.Services.AddScoped<IProductRepo, ProductRepo>();
+builder.Services.AddScoped<IProductService, ProductService>();
 
 //builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-  //  .AddMicrosoftIdentityWebApi(builder.Configuration.GetSection("AzureAd")); // This line is now valid
+//  .AddMicrosoftIdentityWebApi(builder.Configuration.GetSection("AzureAd")); // This line is now valid
 
 
 // Optional: CORS for local dev (adjust origins)

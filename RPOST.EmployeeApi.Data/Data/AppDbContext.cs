@@ -20,7 +20,8 @@ namespace RPOST.EmployeeApi.Data.Data
         public DbSet<JobTitle> JobTitle { get; set; }
         public DbSet<UserProfile> UserProfiles { get; set; }
         public DbSet<JuncEmployeeProjects> JuncEmployeeProjects { get; set; }
-
+        public DbSet<Product> PracticeTables { get; set; }
+        //public DbSet<> 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             //modelBuilder.Entity<Employee>(entity =>
