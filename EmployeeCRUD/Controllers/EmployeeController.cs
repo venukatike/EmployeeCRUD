@@ -10,9 +10,9 @@ namespace EmployeeCRUD.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [ServiceFilter(typeof(LogExecutionTimeFilter))]
-    [ServiceFilter(typeof(ApiExceptionFilter))]
-   // [Authorize]
+    //[ServiceFilter(typeof(LogExecutionTimeFilter))]
+    //[ServiceFilter(typeof(ApiExceptionFilter))]
+    //[Authorize]
     public class EmployeeController : ControllerBase
     {
         private readonly IEmployeeService employeeService;

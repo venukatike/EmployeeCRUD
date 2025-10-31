@@ -17,7 +17,7 @@ namespace RPOST.EmployeeApi.Data.Mapping
             builder.ToTable("JobTitle");
             builder.HasKey(e => e.JobTitlesz);
             builder.Property(e => e.JobTitlesz).HasColumnName("JobTitle");
-            
+            builder.Property(e => e.JobDescription).HasColumnName("JobDescription");
         }
     }
 }

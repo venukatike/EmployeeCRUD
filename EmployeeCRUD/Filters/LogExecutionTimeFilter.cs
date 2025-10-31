@@ -26,7 +26,7 @@ namespace EmployeeCRUD.Filters
             var actionName = context.ActionDescriptor.DisplayName;
             var elapsedMs = stopwatch.ElapsedMilliseconds;
 
-            logger.LogInformation("loiuudsadaded");
+            logger.LogInformation("Before and After Execute");
 
             logger.LogInformation("Action {Action} executed in {ElapsedMilliseconds} ms - filter ra pula", actionName, elapsedMs);
         }

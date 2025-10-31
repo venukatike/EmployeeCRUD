@@ -16,7 +16,7 @@ namespace RPOST.EmployeeApi.Data.Data
         {
 
         }
-        public DbSet<Employee> Employee { get; set; }
+        public DbSet<Employee> Employee { get; set; } // as a table in database
         public DbSet<JobTitle> JobTitle { get; set; }
         public DbSet<UserProfile> UserProfiles { get; set; }
         public DbSet<JuncEmployeeProjects> JuncEmployeeProjects { get; set; }

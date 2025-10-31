@@ -1,5 +1,6 @@
 using System.Text;
 using EmployeeCRUD.Filters;
+using EmployeeCRUD.MiddleWare;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -66,7 +67,11 @@ builder.Services.AddScoped<ApiExceptionFilter>();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+//DB 
 builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("default")));
+
+
 builder.Services.AddScoped<IEmployeeRepo, EmployeeRepo>();
 builder.Services.AddScoped<IEmployeeService, EmployeeService>();
 // Add token service (implementation below)
@@ -103,7 +108,7 @@ app.UseHttpsRedirection();
 app.UseCors("AllowLocalDev");
 app.UseAuthentication(); // IMPORTANT: Authentication first
 app.UseAuthorization();
-
+app.UseMiddleware<CustomMiddleware>();
 app.MapControllers();
 
 app.Run();

@@ -10,7 +10,7 @@ namespace RPOST.EmployeeApi.Domain.Entities
 {
     public class Employee
     {
-        public string EmployeeId { get; set; } //= null!;
+        public string EmployeeId { get; set; } //= null!;   // represents the columnns in a table
 
         public string? FirstName { get; set; }
 
